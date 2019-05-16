@@ -35,6 +35,4 @@
 <style lang="less" scoped>
     .app{padding-top: 40px;}
     .mint-header,.mui-bar-tab{width: 100%;max-width: 640px;margin: 0 auto;}
-
-
 </style>
