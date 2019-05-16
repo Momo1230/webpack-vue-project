@@ -1,0 +1,41 @@
+/********** 基础样式 **********
+
+作    者:lijianhui
+
+时    间:2016-06-10
+
+注:此文件修改需要团队评审
+
+修 改 人:lijianhui
+
+修改时间:2016-07-27
+
+修改说明:xxx
+
+********** 基础样式 **********/
+//默认字体大小
+html{font-size:12px;-webkit-overflow-scrolling:touch;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+body{max-width: @640px!important;margin: 0 auto!important;line-height:@18px; font-size:@12px; color:#999;background: #efeff4;}
+a{color:#999;
+  &:hover{color:#999;}
+}
+input{color:#666; -webkit-appearance:none;}
+select{-webkit-appearance:none;}
+//图片
+img{*width:100%; max-width:100%; max-height:100%; margin-left:auto; margin-right:auto;}
+
+
+//浮动相关
+
+.clear{clear:both;}
+.clearfix{clear:both; zoom:1;}
+.clearfix:after{clear:both; display:block; height:0; font-size:0; content:"."; visibility:hidden;}
+.show{display:block !important;}
+.hide{display:none !important;}
+
+//========== 自适应字体基数 ==========//
+
+@media(min-width:320px) and (max-width:640px)
+{//手机竖屏
+  html{font-size:14px;}
+}
