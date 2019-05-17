@@ -1,0 +1,9 @@
+{
+  "ret": 0,
+  "message": [
+    {"url": "/home", "img": "https://img.tttcdn.com/edm/201705/EDM_tootarts_20170526_banner01.jpg"},
+    {"url": "/home","img": "https://img.tttcdn.com/activity/201702/cdn-resource/EDM_tomtop_20170320_banner2.jpg"},
+    {"url": "/home","img": "https://img.tttcdn.com/activity/201702/cdn-resource/EDM_tomtop_20170320_banner3.jpg"},
+    {"url": "/home","img": "https://img.tttcdn.com/activity/201702/cdn-resource/EDM_tomtop_20170320_banner4.jpg"}
+  ]
+}

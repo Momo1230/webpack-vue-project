@@ -15,8 +15,8 @@
 ********** 基础样式 **********/
 //默认字体大小
 html{font-size:12px;-webkit-overflow-scrolling:touch;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-body{max-width: @640px!important;margin: 0 auto!important;line-height:@18px; font-size:@12px; color:#999;background: #efeff4;}
-a{color:#999;
+body{max-width: @640px!important;margin: 0 auto!important;line-height:@18px; font-size:@12px; color:#999;background: #fff;}
+a{color:#999;text-decoration: none;
   &:hover{color:#999;}
 }
 input{color:#666; -webkit-appearance:none;}
@@ -32,6 +32,15 @@ img{*width:100%; max-width:100%; max-height:100%; margin-left:auto; margin-right
 .clearfix:after{clear:both; display:block; height:0; font-size:0; content:"."; visibility:hidden;}
 .show{display:block !important;}
 .hide{display:none !important;}
+
+//水平并排相关
+.lineBlockBox(@align:left){display:table; text-align:@align; width:100%; font-size:0; letter-spacing:-3px;  word-spacing:-3px;}
+.lineBlock(@align:middle){display:inline-block; *display:inline; *zoom:1; vertical-align:@align; font-size:12px; letter-spacing:0; word-spacing:0;}
+.lineBlockBoxs(@align:left,@salign:middle){display:table; width:100%;text-align:@align; font-size:0; letter-spacing:-3px;  word-spacing:-3px;
+  >*{.lineBlock(@salign);}
+}
+//处理超出字符
+.strLen(){text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 
 //========== 自适应字体基数 ==========//
 
