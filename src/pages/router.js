@@ -6,6 +6,7 @@ import search from '../components/search.vue'
 
 var router = new Vuerouter({
     routes:[
+        {path:'/',redirect:'/home'},
         {path:'/home',component:home},
         {path:'/member',component:member},
         {path:'/shopcar',component:shopcar},
