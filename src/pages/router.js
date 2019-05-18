@@ -11,6 +11,7 @@ var router = new Vuerouter({
         {path:'/member',component:member},
         {path:'/shopcar',component:shopcar},
         {path:'/search',component:search}
-    ]
+    ],
+    linkActiveClass:'mui-active'
 })
 export default router
