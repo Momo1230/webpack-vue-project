@@ -10,10 +10,10 @@
         <!--图标按钮-->
         <ul class="m_grid-view">
             <li>
-                <a href="#">
+                <router-link to="home/newslist">
                     <img src="../img/menu1.png" alt="">
                     <div class="grid-tt">新闻资讯</div>
-                </a>
+                </router-link>
             </li>
             <li>
                 <a href="#">

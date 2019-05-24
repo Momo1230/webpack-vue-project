@@ -34,6 +34,6 @@
     .v-enter{opacity: 0;transform: translateX(100%);}
     .v-leave-to{opacity: 0;transform: translateX(-100%);position: absolute;}
     .v-enter-active,.v-leave-active{transition: all 0.4s ease;}
-    .app{padding-top: 40px;overflow-x: hidden;}
+    .app{padding: 40px 0 50px;overflow-x: hidden;}
     .mint-header,.mui-bar-tab{width: 100%;max-width: 640px;margin: 0 auto;}
 </style>
