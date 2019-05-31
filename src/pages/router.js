@@ -5,6 +5,7 @@ import shopcar from '../components/shopcar.vue'
 import search from '../components/search.vue'
 import newslist from '../components/newslist.vue'
 import newsinfo from '../components/newsinfo.vue'
+import photolist from '../components/photolist.vue'
 
 var router = new Vuerouter({
     routes:[
@@ -14,7 +15,8 @@ var router = new Vuerouter({
         {path:'/shopcar',component:shopcar},
         {path:'/search',component:search},
         {path:'/home/newslist',component:newslist},
-        {path:'/home/newslist/:id',component:newsinfo}
+        {path:'/home/newslist/:id',component:newsinfo},
+        {path:'/home/photolist',component:photolist}
     ],
     linkActiveClass:'mui-active'
 })

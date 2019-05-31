@@ -5,7 +5,7 @@ import app from './pages/app.vue'
 import moment from "moment";
 //样式文件
 import './assets/module.less'
-import { Header, Swipe, SwipeItem } from 'mint-ui';
+import { Header, Swipe, SwipeItem,Button } from 'mint-ui';
 // 导入 MUI 的样式
 import './lib/mui/css/mui.css'
 // 导入扩展图标样式
@@ -18,9 +18,10 @@ import router from './pages/router.js'
 Vue.component(Header.name,Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Button.name, Button);
 Vue.use(VueRouter);
 Vue.use(VueResource);
-
+Vue.http.options.emulateJSON = true;
 Vue.filter('dataFormat',function (dataStr,pattern="YYYY-MM-DD hh:mm:ss") {
     //采用moment插件
     return moment(dataStr).format(pattern);

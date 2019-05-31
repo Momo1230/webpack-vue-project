@@ -33,7 +33,7 @@
                     if(res.body.ret == 0){
                         this.newsList = res.body.message
                     }else{
-                        Toast('加载新闻资讯失败 !')
+                        Toast('Upload Fail !');
                     }
                 })
             }

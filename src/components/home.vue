@@ -16,10 +16,10 @@
                 </router-link>
             </li>
             <li>
-                <a href="#">
+                <router-link to="home/photolist">
                     <img src="../img/menu2.png" alt="">
                     <div class="grid-tt">图片分享</div>
-                </a>
+                </router-link>
             </li>
             <li>
                 <a href="#">

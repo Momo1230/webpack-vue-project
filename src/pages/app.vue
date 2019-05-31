@@ -12,7 +12,7 @@
                 <span class="mui-icon mui-icon-home"></span>
                 <span class="mui-tab-label">首页</span>
             </router-link>
-            <router-link class="mui-tab-item" to="member">
+            <router-link class="mui-tab-item" to="/member">
                 <span class="mui-icon mui-icon-contact"></span>
                 <span class="mui-tab-label">会员</span>
             </router-link>
@@ -34,6 +34,5 @@
     .v-enter{opacity: 0;transform: translateX(100%);}
     .v-leave-to{opacity: 0;transform: translateX(-100%);position: absolute;}
     .v-enter-active,.v-leave-active{transition: all 0.4s ease;}
-    .app{padding: 40px 0 50px;overflow-x: hidden;}
-    .mint-header,.mui-bar-tab{width: 100%;max-width: 640px;margin: 0 auto;}
+    .app{padding: 40px 0 51px;overflow-x: hidden;}
 </style>
