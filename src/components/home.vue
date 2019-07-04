@@ -1,12 +1,7 @@
 <template>
     <div>
         <!--轮播图片-->
-        <mt-swipe :auto="4000">
-            <mt-swipe-item v-for="item in bannerList" :key="item.img">
-                <img :src="item.img" alt="banner">
-            </mt-swipe-item>
-        </mt-swipe>
-
+        <swipeBanner :dataList="bannerList" :isfull="true"></swipeBanner>
         <!--图标按钮-->
         <ul class="m_grid-view">
             <li>
@@ -22,10 +17,10 @@
                 </router-link>
             </li>
             <li>
-                <a href="#">
+                <router-link to="home/goodslist">
                     <img src="../img/menu3.png" alt="">
                     <div class="grid-tt">商品购买</div>
-                </a>
+                </router-link>
             </li>
             <li>
                 <a href="#">
@@ -51,6 +46,7 @@
 </template>
 <script>
     import { Toast } from 'mint-ui';
+    import swipeBanner from './swipeBanner.vue'
     export default {
         data(){
             return{
@@ -70,16 +66,13 @@
                     }
                 })
             }
+        },
+        components:{
+            swipeBanner
         }
     }
 
 </script>
-<style lang="less" scoped>
-/*轮播图片*/
-.mint-swipe{height: 12.08rem;
-    img{width:100%;height: 100%;}
-}
-@media (min-width: 450px) {
-    .mint-swipe{height: 24.17rem;}
-}
+<style lang="less">
+
 </style>
