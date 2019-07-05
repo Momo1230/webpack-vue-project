@@ -1,18 +1,18 @@
 <template>
     <div class="cartBox">
         <!--购物车商品-->
-        <div class="mui-card" v-for="item in cartList" :key="item.id">
+        <div class="mui-card" v-for="(item,index) in cartList" :key="item.id">
             <div class="mui-card-content">
                 <div class="mui-card-content-inner">
                     <div class="cart_wrap" >
-                        <mt-switch></mt-switch>
+                        <mt-switch v-model="$store.getters.getSelectedFlag[item.id]" @change="selectedChange(item.id,$store.getters.getSelectedFlag[item.id])"></mt-switch>
                         <img :src="item.thumb_path" alt="">
                         <div class="info">
                             <h1>{{item.title}}</h1>
                             <p>
                                 <span class="current_price">￥{{item.sell_price}}</span>
-                                <cartnumbox :cartNum="$store.getters.shopCartCountObj[item.id]"></cartnumbox>
-                                <a href="#">删除</a>
+                                <cartnumbox :cartNum="$store.getters.shopCartCountObj[item.id]" :productSku="item.id"></cartnumbox>
+                                <a href="#" @click.stop="removeCartPrd(item.id,index)">删除</a>
                             </p>
                             <!--
                                 商品购物车中的数量，需要根据cart中的id对应的数量来展示
@@ -33,8 +33,12 @@
         <div class="mui-card">
             <div class="mui-card-content">
                 <div class="mui-card-content-inner">
-                    <div class="cart_wrap">
-
+                    <div class="cart_wrap settlement">
+                        <div class="left">
+                            <p>总计（不含运费）</p>
+                            <p>已勾选商品0件，总价￥0</p>
+                        </div>
+                        <mt-button type="danger" size="small">去结算</mt-button>
                     </div>
                 </div>
             </div>
@@ -67,6 +71,19 @@ export default {
                     this.cartList = res.body.message;
                 }
             })
+        },
+        removeCartPrd(id,index){
+            //点击删除购物车列表里面的商品
+            this.cartList.splice(index,1);
+            this.$store.commit('removeCartList',id);
+        },
+        //改变选中状态
+        selectedChange(id,value){
+            //每当点击开关，把最新的开关状态同步到store中去
+            //这个插件自带的v-model，以及change的状态下的事件，，当改变状态时，v-model会自动更新，，所以这个value就是更新之后我们需要的状态
+            //使用store中的mutations函数来改变存储 selected的值
+            console.log(id+'----'+value)
+            this.$store.commit('updateSelectedFlag',{id,selected:value});
         }
     }
 }
@@ -89,5 +106,6 @@ export default {
             }
         }
         .cart_wrap:last-child{margin-bottom: 0;}
+        .settlement{display:flex;justify-content: space-between;align-items: center;}
     }
 </style>

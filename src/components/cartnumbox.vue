@@ -1,7 +1,7 @@
 <template>
     <div class="mui-numbox" data-numbox-min='1' data-numbox-max='9'>
         <button class="mui-btn mui-btn-numbox-minus" type="button" @click="miun">-</button>
-        <input id="test" class="mui-input-numbox" type="number" :value="cartNum" ref="countInput" @change="changeCartNum()" readonly/>
+        <input id="test" class="mui-input-numbox" type="number" :value="cartNum" ref="countInput" readonly/>
         <button class="mui-btn mui-btn-numbox-plus" type="button" @click="add">+</button>
     </div>
 </template>
@@ -13,17 +13,18 @@
 
             }
         },
-        props:["cartNum"],
+        props:["cartNum","productSku"],
+
         methods:{
             miun(){
-                if(this.cartNum > 1){
-                    this.cartNum --;
+                if(this.cartNum >1){
+                    var data = {id:this.productSku,count:this.cartNum}
+                    this.$store.commit('updateCartCountMinu',data);
                 }
-
             },
-            add(){},
-            changeCartNum(){
-                console.log(123);
+            add(){
+                var data = {id:this.productSku,count:this.cartNum}
+                this.$store.commit('updateCartCountAdd',data);
             }
         }
     }
