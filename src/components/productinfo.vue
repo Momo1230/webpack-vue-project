@@ -23,7 +23,7 @@
             <div class="mui-card-content">
                 <div class="mui-card-content-inner">
                     <p class="price">
-                        市场价: <del>￥2399</del>&nbsp;&nbsp;销售价: <span class="current_price" ref="current_price">￥2199</span>
+                        市场价: <del>￥2399</del>&nbsp;&nbsp;销售价: <span class="current_price" ref="current_price">￥2195</span>
                     </p>
                     <p>
                         购买数量:

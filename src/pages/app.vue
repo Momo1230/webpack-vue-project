@@ -1,7 +1,11 @@
 <template>
     <div class="app">
         <!--header-->
-        <mt-header fixed title="Vue+webpack项目"></mt-header>
+        <mt-header fixed title="Vue+webpack项目">
+            <span @click="goBack()" slot="left" v-if="flag">
+                <mt-button icon="back">返回</mt-button>
+            </span>
+        </mt-header>
         <!--中间路由router-view-->
         <transition>
             <router-view></router-view>
@@ -28,6 +32,31 @@
     </div>
 </template>
 <script>
+    export default {
+        data(){
+            return{
+                flag:false
+            }
+        },
+        created(){
+            this.flag = this.$route.path == '/home' ? false : true;
+        },
+        watch:{
+            "$route.path":function (newvalue) {
+                if(newvalue == '/home'){
+                    this.flag = false;
+                }else{
+                    this.flag = true;
+                }
+            }
+        },
+        methods:{
+            goBack(){
+                //点击后退方法
+                this.$router.go(-1);
+            }
+        }
+    }
 
 </script>
 <style lang="less" scoped>

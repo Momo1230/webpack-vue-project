@@ -27,8 +27,8 @@
                     <div class="prd_info">
                         <h4 class="prd_tt"><router-link to="/home/goodsinfo/p-n2.html">2019全球版原版小米四级</router-link></h4>
                         <div class="price">
-                            <span class="current_price">￥269</span>
-                            <span class="origin_price">￥299</span>
+                            <span class="current_price">￥2195</span>
+                            <span class="origin_price">￥2499</span>
                         </div>
                         <div class="sold">
                             <span>热卖中</span>
@@ -45,8 +45,8 @@
                     <div class="prd_info">
                         <h4 class="prd_tt"><router-link to="/home/goodsinfo/p-n3.html">Anycast M2 Plus无线WiFi显示加密狗接收器电视棒</router-link></h4>
                         <div class="price">
-                            <span class="current_price">￥89</span>
-                            <span class="origin_price">￥109</span>
+                            <span class="current_price">￥2195</span>
+                            <span class="origin_price">￥2499</span>
                         </div>
                         <div class="sold">
                             <span>热卖中</span>
@@ -63,8 +63,8 @@
                     <div class="prd_info">
                         <h4 class="prd_tt"><router-link to="/home/goodsinfo/p-n4.html">Sades SA-930 3.5毫米游戏耳机，带麦克风</router-link></h4>
                         <div class="price">
-                            <span class="current_price">￥265</span>
-                            <span class="origin_price">￥289</span>
+                            <span class="current_price">￥2195</span>
+                            <span class="origin_price">￥2499</span>
                         </div>
                         <div class="sold">
                             <span>热卖中</span>
@@ -81,8 +81,8 @@
                     <div class="prd_info">
                         <h4 class="prd_tt"><router-link to="/home/goodsinfo/p-n5.html">Laxury Wendup 3马旋转木马音乐盒创意艺术品礼品</router-link></h4>
                         <div class="price">
-                            <span class="current_price">￥199</span>
-                            <span class="origin_price">￥299</span>
+                            <span class="current_price">￥2195</span>
+                            <span class="origin_price">￥2499</span>
                         </div>
                         <div class="sold">
                             <span>热卖中</span>
@@ -99,8 +99,8 @@
                     <div class="prd_info">
                         <h4 class="prd_tt"><router-link to="/home/goodsinfo/p-n6.html">弹药木卡戎手鼓儿童箱鼓刺伤橡胶脚锤23*24*37cm</router-link></h4>
                         <div class="price">
-                            <span class="current_price">￥567</span>
-                            <span class="origin_price">￥609</span>
+                            <span class="current_price">￥2195</span>
+                            <span class="origin_price">￥2499</span>
                         </div>
                         <div class="sold">
                             <span>热卖中</span>

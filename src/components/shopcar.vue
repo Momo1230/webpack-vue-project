@@ -36,7 +36,7 @@
                     <div class="cart_wrap settlement">
                         <div class="left">
                             <p>总计（不含运费）</p>
-                            <p>已勾选商品0件，总价￥0</p>
+                            <p>已勾选商品<span class="red">{{$store.getters.getTotalPrice.count}}</span>件，总价<span class="red">￥{{$store.getters.getTotalPrice.amount}}</span></p>
                         </div>
                         <mt-button type="danger" size="small">去结算</mt-button>
                     </div>
@@ -106,6 +106,8 @@ export default {
             }
         }
         .cart_wrap:last-child{margin-bottom: 0;}
-        .settlement{display:flex;justify-content: space-between;align-items: center;}
+        .settlement{display:flex;justify-content: space-between;align-items: center;
+            .red{color:red;font-weight: bold;}
+        }
     }
 </style>

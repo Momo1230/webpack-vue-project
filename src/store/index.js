@@ -97,6 +97,22 @@ const store = new Vuex.Store({
                 obj[item.id] = item.selected
             })
             return obj;
+        },
+        getTotalPrice(state){
+            var obj = {
+                count:0,//选中商品个数
+                amount:0,//选中总价
+            };
+            state.cart.forEach(item=>{
+                if(item.selected){//若当前商品为选中商品
+                    var unitPrice = item.price.match(/[\d]+/g)[0];
+                    console.log(unitPrice)
+                    obj.count += item.count;
+                    obj.amount += item.count * unitPrice;
+                }
+            })
+            console.log(obj);
+            return obj;
         }
     }
 });
